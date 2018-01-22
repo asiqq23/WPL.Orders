@@ -19,6 +19,7 @@ namespace WPL.Orders
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseUrls("http://*:3333")
                 .UseStartup<Startup>()
                 .Build();
     }
