@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: order-service
+  labels:
+    run: order-service
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: order-service
+    spec:
+      containers:
+      - name: order-service
+        image: asiqq23/order-service
+        ports:
+        - containerPort: 3333
+          protocol: TCP
